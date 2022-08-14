@@ -1,18 +1,17 @@
-import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {MaterialExampleModule} from '../material.module';
-import {PrimeNGModule } from './allprime/allprime.module' ;
-
-import {FormFieldAppearanceExample} from './form-field-appearance-example';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatNativeDateModule} from '@angular/material/core';
-import {HttpClientModule} from '@angular/common/http';
-
+import { MaterialExampleModule } from '../material.module';
+import { PrimeNGModule } from './allprime/allprime.module';
+import { FormFieldAppearanceExample } from './form-field-appearance-example';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatNativeDateModule } from '@angular/material/core';
+import { HttpClientModule } from '@angular/common/http';
+import { AppComponent } from './app.component';
 
 @NgModule({
-  declarations: [FormFieldAppearanceExample],
+  declarations: [FormFieldAppearanceExample, AppComponent],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
@@ -21,10 +20,10 @@ import {HttpClientModule} from '@angular/common/http';
     MatNativeDateModule,
     MaterialExampleModule,
     ReactiveFormsModule,
-    
-    PrimeNGModule
+
+    PrimeNGModule,
   ],
   providers: [],
-  bootstrap: [FormFieldAppearanceExample],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
