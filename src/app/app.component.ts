@@ -5,7 +5,7 @@ import { MenuItem } from "primeng/api";
 import { PanelModule } from 'primeng/panel';
 import { SelectItem } from 'primeng/api';
 import {DropdownModule} from 'primeng/dropdown';
-
+import { faFilm } from '@fortawesome/free-solid-svg-icons';
 
 /** @title Form field appearance variants */
 @Component({
@@ -16,6 +16,7 @@ import {DropdownModule} from 'primeng/dropdown';
 
 export class AppComponent {
 
+  filmIcon = faFilm;
   constructor(private primengConfig: PrimeNGConfig) {}
 
 }

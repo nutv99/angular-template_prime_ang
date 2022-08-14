@@ -9,10 +9,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
-
+import { MainpageComponent } from './pages/mainpage/mainpage.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, MainpageComponent],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
@@ -21,7 +22,7 @@ import { AppComponent } from './app.component';
     MatNativeDateModule,
     MaterialExampleModule,
     ReactiveFormsModule,
-
+    FontAwesomeModule,
     PrimeNGModule,
   ],
   providers: [],
