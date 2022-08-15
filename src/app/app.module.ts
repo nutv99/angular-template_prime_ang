@@ -12,9 +12,10 @@ import { AppComponent } from './app.component';
 import { MainpageComponent } from './pages/mainpage/mainpage.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MainRouteModule } from './main-route/main-route.module';
+import { ShopmasterComponent } from './pages/shopmaster/shopmaster.component';
 
 @NgModule({
-  declarations: [AppComponent, MainpageComponent],
+  declarations: [AppComponent, MainpageComponent, ShopmasterComponent],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
