@@ -11,9 +11,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { MainpageComponent } from './pages/mainpage/mainpage.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { MainRouteModule } from './main-route/main-route.module';
+
 
 import { FormCustomerComponent } from './pages/form-customer/form-customer.component';
+import { MyrouterModule } from './myrouter.module';
 
 
 @NgModule({
@@ -28,8 +29,9 @@ import { FormCustomerComponent } from './pages/form-customer/form-customer.compo
     ReactiveFormsModule,
     FontAwesomeModule,
     PrimeNGModule,
-    MainRouteModule,
+    MyrouterModule    
   ],
+  
   providers: [],
   bootstrap: [AppComponent],
 })
