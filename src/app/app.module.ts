@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { MainpageComponent } from './pages/mainpage/mainpage.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MainRouteModule } from './main-route/main-route.module';
 
 @NgModule({
   declarations: [AppComponent, MainpageComponent],
@@ -24,6 +25,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ReactiveFormsModule,
     FontAwesomeModule,
     PrimeNGModule,
+    MainRouteModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
