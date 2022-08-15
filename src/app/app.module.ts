@@ -14,7 +14,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 import { FormCustomerComponent } from './pages/form-customer/form-customer.component';
-import { MyrouterModule } from './myrouter.module';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -29,7 +29,7 @@ import { MyrouterModule } from './myrouter.module';
     ReactiveFormsModule,
     FontAwesomeModule,
     PrimeNGModule,
-    MyrouterModule    
+    AppRoutingModule    
   ],
   
   providers: [],
