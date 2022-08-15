@@ -12,10 +12,12 @@ import { AppComponent } from './app.component';
 import { MainpageComponent } from './pages/mainpage/mainpage.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MainRouteModule } from './main-route/main-route.module';
-import { ShopmasterComponent } from './pages/shopmaster/shopmaster.component';
+
+import { FormCustomerComponent } from './pages/form-customer/form-customer.component';
+
 
 @NgModule({
-  declarations: [AppComponent, MainpageComponent, ShopmasterComponent],
+  declarations: [AppComponent, MainpageComponent,FormCustomerComponent],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
