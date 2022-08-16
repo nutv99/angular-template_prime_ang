@@ -1,63 +1,196 @@
 <h1>Angular Router Demo</h1>
-<app-mainpage></app-mainpage>
+<!-- <app-mainpage></app-mainpage> -->
 <a href="/customer">Customer</a> <br />
 <a routerLink="product999">Product</a>
-<br>
+<br />
 <a routerLink="category">category</a>
-<router-outlet></router-outlet>
-<!-- <app-mainpage></app-mainpage> -->
-<!-- 
-<p-panel>
-  <ng-template pTemplate="header"> Header content here </ng-template>
-  Body Content
-  <ng-template pTemplate="footer"> Footer content here </ng-template>
-</p-panel>
+<style>
+      * {
+        font-family: 'Playfair Display', serif;
+        font-family: 'Sarabun', sans-serif;
+      }
+      .topHeader {
+         width:100% ;
+         height:50px; padding:10px;
+      }
+      .flex { display:flex; align-items:center}
+      form {
+     color: #555;
+     display: flex;
+     padding: 2px;
+     border: 1px solid white;
+     border-radius: 5px;
+     height:30px;
+    }
 
-<br /><br />
-<hr />
-<p-panel>
-  <ng-template pTemplate="header"> Header content here </ng-template>
-  Body Content
-  <ng-template pTemplate="footer"> Footer content here </ng-template>
-</p-panel>
+    input[type="search"] {
+     border: none;
+     background: transparent;
+     margin: 0;
+     padding: 7px 8px;
+     font-size: 14px;
+     color: inherit;
+     border: 1px solid transparent;
+     border-radius: inherit;
+    }
 
-<span class="p-float-label">
-  <input id="float-input" type="text" pInputText />
-  <label for="float-input">Username</label>
-</span>
-<p>
-  <mat-form-field appearance="legacy">
-    <mat-label>Legacy form field</mat-label>
-    <input matInput placeholder="Placeholder" />
-    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-    <mat-hint>Hint</mat-hint>
-  </mat-form-field>
-</p>
-<p>
-  <mat-form-field appearance="standard">
-    <mat-label>Standard form field</mat-label>
-    <input matInput placeholder="Placeholder" />
-    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-    <mat-hint>Hint</mat-hint>
-  </mat-form-field>
-</p>
-<p>
-  <mat-form-field appearance="fill">
-    <mat-label>Fill form field</mat-label>
-    <input matInput placeholder="Placeholder" />
-    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-    <mat-hint>Hint</mat-hint>
-  </mat-form-field>
-</p>
-<p>
-  <mat-form-field appearance="outline">
-    <mat-label>Outline form field</mat-label>
-    <input matInput placeholder="Placeholder" />
-    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-    <mat-hint>Hint</mat-hint>
-  </mat-form-field>
-</p> -->
+    input[type="search"]::placeholder {
+     color: #bbb;
+     color:white;
+    }
+    button[type="submit"] {
+     text-indent: -999px;
+     overflow: hidden;
+     width: 40px;
+     padding: 0;
+     margin: 0;
+     border: 1px solid transparent;
+     border-radius: inherit;
+     background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat center;
+     cursor: pointer;
+     opacity: 0.7;
+     color:white;
+    }
 
-<!-- Copyright 2022 Google LLC. All Rights Reserved.
-    Use of this source code is governed by an MIT-style license that
-    can be found in the LICENSE file at https://angular.io/license -->
+    button[type="submit"]:hover {
+     opacity: 1;
+    }
+    button[type="submit"]:focus,
+    input[type="search"]:focus {
+     box-shadow: 0 0 3px 0 #1183d6;
+     border-color: #1183d6;
+     outline: none;
+    }
+    .desktop {
+     background:url(
+      'https://cdn.myportfolio.com/2a66d6af-2712-4ba2-a0e6-458fda964406/7a5a2932-ce63-457d-b9f3-126789f39dd4_rwc_240x146x1469x1149x1469.jpg?h=f14db8a8e4edf4bb862c5430308d1e9f') ;
+      /* background-size: contain; */
+      background-size: 100% 100%;
+      background-blend-mode: lighten;
+      background-origin: content-box;
+      justify-content:center;
+      align-items:center;
+      display:flex;
+
+    }
+    .grassbox {
+
+    width: 30rem;
+    padding:20px;
+    color:white;
+    height: 20rem;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, .15);
+
+    backdrop-filter: blur(5px);
+  }
+</style>
+
+<div
+  id=""
+  class="topHeader bordergray flex"
+  style="border:1px solid #eee,border-radius: 4px;color:#333333;background:#3f51bc;color:white;width:100%"
+>
+  <div style="background:#eee;border-radius:55%">
+    <img
+      src="https://thumbs.dreamstime.com/b/eagle-logo-vector-illustration-emblem-white-background-design-83827793.jpg"
+      class="img-fluid"
+      style="width:50px;border-radius:50%"
+    />
+  </div>
+  <div style="color:white;font-size:18px;margin-left:12px;">
+    Talon++ Project
+  </div>
+  <div
+    id=""
+    class="flex"
+    style="margin-left:auto;color:white;margin-right:15px"
+  >
+    <form style="margin-right:20px">
+      <input type="search" placeholder="Search..." />
+      <button type="submit">Search</button>
+    </form>
+
+    <i class="fad fa-sign-in"></i>
+    <i class="fas fa-user-circle"></i>
+  </div>
+</div>
+
+<div id="tokendiv" class="row-fluid grid">
+  <div
+    id=""
+    class="col-md-2 col-2"
+    style="border:1px solid #eee,border-radius: 4px;color:#333333;background:#f3f3f3;min-height:90vh;overflow:scroll "
+  >
+    <ol style="line-height:30px">
+      <li><a routerLink="shopmaster">ข้อมูลร้านค้า </a></li>
+      <a routerLink="product999">Product</a>
+      <li>
+        ข้อมูลสินค้า
+        <ol>
+          <li>ประเภทสินค้า</li>
+          <li>แผนกสินค้า</li>
+          <li>หมวดสินค้า</li>
+          <li>กลุ่มสินค้า</li>
+          <li>สินค้า</li>
+        </ol>
+      </li>
+      <li>
+        ส่งเสริมการขาย
+        <ol>
+          <li>SEO</li>
+          <li>สร้างโปรโมชั่น</li>
+          <li></li>
+          <li></li>
+        </ol>
+      </li>
+      <li>ข้อมูล-ลูกค้า</li>
+      <li>ข้อมูล-ทีมงานขาย</li>
+      <li>รายงานขาย</li>
+    </ol>
+  </div>
+  <div
+    id=""
+    class="col-10 desktop"
+    style="border:1px solid black,border-radius: 4px;color:#333333 ;"
+  >
+    <h1>Col</h1>
+    <!-- <div class="grassbox">
+      <span style="color:black;font-size:22px"
+        >Welcome To Administrator Page
+      </span><p>
+      กรุณาเลือก ทำรายการ จาก เมนู ด้านซ้าย
+      </p>
+    </div> -->
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<style>
+  footer{
+
+     position: fixed;
+     bottom: 0;
+     width: 100%;
+     height: 60px;   /* Height of the footer */
+     background: #3F519E;
+  }
+</style>
+<style>
+  .rightSideBar {
+     position:fixed;
+   right:0px;
+   top: calc(50% - 30px);
+   width:50px; height:50px;
+   background:#00C8FF;color:white;
+   justify-content:center;
+   z-index:60000;
+
+  }
+</style>
+
+<div class="rightSideBar flex">
+  <!-- <i class="fal fa-cog" style="color:white;font-size:22px"></i> -->
+</div>
+<footer class="flex" style="display:flex;color:white">Copy Right</footer>
