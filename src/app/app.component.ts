@@ -6,7 +6,7 @@ import { PanelModule } from 'primeng/panel';
 import { SelectItem } from 'primeng/api';
 import {DropdownModule} from 'primeng/dropdown';
 import { faFilm } from '@fortawesome/free-solid-svg-icons';
-
+import { MainpageComponent } from './pages/mainpage/mainpage.component' ;
 
 /** @title Form field appearance variants */
 @Component({
