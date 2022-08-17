@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { PrimeNGConfig } from 'primeng/api';
 import { CheckboxModule } from 'primeng/checkbox';
-import { MenuItem } from 'primeng/api';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-product',
@@ -19,7 +20,7 @@ export class ProductComponent implements OnInit {
 
   checked: boolean = false;
 
-  constructor() {}
+  constructor(private primengConfig: PrimeNGConfig) {}
 
   ngOnInit(): void {
     this.selectedCategories = this.categories.slice(1, 3);
