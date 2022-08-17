@@ -16,6 +16,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormCustomerComponent } from './pages/form-customer/form-customer.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { CheckboxModule } from 'primeng/checkbox';
 
 @NgModule({
   declarations: [AppComponent, MainpageComponent,FormCustomerComponent],
@@ -29,7 +30,8 @@ import { AppRoutingModule } from './app-routing.module';
     ReactiveFormsModule,
     FontAwesomeModule,
     PrimeNGModule,
-    AppRoutingModule    
+    AppRoutingModule ,
+    CheckboxModule   
   ],
   
   providers: [],

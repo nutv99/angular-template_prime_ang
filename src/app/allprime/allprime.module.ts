@@ -7,6 +7,7 @@ import { TriStateCheckboxModule} from 'primeng/tristatecheckbox';
 import {DropdownModule} from 'primeng/dropdown';
 import {InputTextModule} from 'primeng/inputtext';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {CheckboxModule} from 'primeng/checkbox';
 
 @NgModule({
   declarations: [],
@@ -17,7 +18,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     ButtonModule,
     TriStateCheckboxModule,
     DropdownModule,
-    InputTextModule
+    InputTextModule,
+    CheckboxModule
   ]
 })
 export class PrimeNGModule { }
